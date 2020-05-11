@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		img{object-fit: cover;}
+	</style>
+</head>
+<body>
+	<br>
+	<h4 style="text-align: center;"> Enter URL for list of tallest buildings JSON File </h4>
+	<form name="myform" method="POST" id="location" style="text-align: center;">
+		<input type="text" name="URL" maxlength="100" size="25" value="buildinglist.json" />
+		<br>
+		<br>
+		<input type="button" name="submit" value="Submit Query" onClick="viewJSON(this.form)" />
+	</form>
+
+	<script type="text/javascript">
+		
+		function viewJSON(what) 
+		{
+			var URL = what.URL.value;  
+
+			function loadJSON(url) 
+			{
+				xmlhttp=new XMLHttpRequest();
+				xmlhttp.open("GET",url,false); // "synchronous” (deprecated because it freezes the page while waiting for a response) *
+				try{
+					xmlhttp.send();
+					if(xmlhttp.status==0 || xmlhttp.status==200)
+					{
+						jsonObj= JSON.parse(xmlhttp.responseText);
+						return jsonObj;
+					}
+					else
+						window.alert("A valid JSON File Not Found!");
+				}
+				catch(error){
+					window.alert("A valid JSON File Not Found!");
+				}
+					
+				   
+			}
+
+			jsonObj = loadJSON(URL);
+			jsonObj.onload=generateHTML(jsonObj);
+			hWin = window.open("", "Assignment4", "height=700,width=970");
+			hWin.document.write(html_text); 
+			hWin.document.close();  
+		}
+
+		function generateHTML(jsonObj)   
+		{
+        	root=jsonObj.DocumentElement; 
+        	html_text="<html><head><title>JSON Parse Result</title></head><body>";
+         	html_text+="<table border='2'>"; 
+        	//caption=jsonObj.catalog.title; 
+        	//html_text+="<caption align='left'><h1>"+caption+"</h1></caption>";
+        	planes=jsonObj.Mainline.Table.Row;
+        	planes1=jsonObj.Mainline.Table.Header.Data;
+        	if(planes==undefined){
+        		window.alert("No Data content in JSON file");
+        	}
+        	else if(planes.length==0){
+        		window.alert("Empty Data content in JSON file");
+        	}
+        	// an array of planes
+        	planeNodeList=planes[0];
+        	html_text+="<tbody>"; 
+        	html_text+="<tr>"; 
+        	x=140;  y=140;
+			// output the headers
+			var header_keys = Object.keys(planeNodeList);
+
+			for(i=0;i<planes1.length;i++){
+
+				html_text+="<th>"+planes1[i]+"</th>";
+			}
+
+			html_text+="</tr>"; 
+			// output out the values
+			for(i=0;i<planes.length;i++) //do for all planes (one per row)
+			{                 
+			   planeNodeList=planes[i]; //get properties of a plane (an object)
+			   html_text+="<tr>";      //start a new row of the output table
+			   var aircraft_keys = Object.keys(planeNodeList);
+			   for(j=0;j<aircraft_keys.length;j++) 
+			   {
+			      prop = aircraft_keys[j];
+			      if(aircraft_keys[j]=="Hubs")
+			      {
+			      	p=planeNodeList[prop].Hub
+			      	html_text+="<td><ul>";
+			      	flag=0;
+			      	for(k=0;k<p.length;k++){
+			      		if(k==0)
+			      		{
+			      			if(p[0].length==0)
+			      				continue;
+			      			else{
+			      				html_text+="<li><b>"+p[0] +"</b></li>";
+			      				flag=1;
+			      			}
+			      		}	
+			      		else
+			      		{
+			      			if(p[k].length==0)
+			      				continue;
+			      			else if(p[k-1].length==0 && flag==0){
+			      				html_text+="<li><b>"+p[k] +"</b></li>";
+			      				flag=1;
+			      			}
+			      			else
+			      				html_text+="<li>"+p[k]+"</li>";
+			      		}
+			      	}
+			      	html_text+="</ul></td>";
+
+			      }
+			      else if(aircraft_keys[j]=="HomePage"){
+			      	html_text+="<td><a href='"+planeNodeList[prop] +"'>" +planeNodeList[prop]+"</a>"+ "</td>";
+			      }
+			      else if(aircraft_keys[j]=="Logo")      
+			      {
+			         //handle images separately
+			         html_text+="<td><img src='"+ planeNodeList[prop] +"'' width='"+x+"' height='"+y+"'></td>";          
+			      } 
+			      else 
+			      {                  
+			         html_text+="<td>"+ planeNodeList[prop] +"</td>";                     
+			      }
+			   }                  
+			   html_text+="</tr>";            
+			} 
+        	                           
+			html_text+="</tbody>"; 
+			html_text+="</table>";           
+			html_text+= "</bo" + "<dy> </html>";	    
+		}               		
+
+	</script>
+
+</body>
+</html>
