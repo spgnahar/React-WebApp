@@ -7,4 +7,4 @@
 [Full description of the assignment](https://github.com/spgnahar/CSCI-571-Web-Technologies/blob/master/Assignment%204/HW4_Description.pdf).
 ## Screenshot of the Working 
 
-![Imgur](https://imgur.com/qCjmpsO)
+![Imgur](https://i.imgur.com/qCjmpsO.png)
