@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/static/index.css" />
+	<style type="text/css" >
+		*{font-family:'Georgia';}
+		h1{margin-bottom: 0px;padding-bottom: 0px; font-size: 25px;}
+		.Main{
+			padding: 30px;
+			margin-left: 325px;
+			margin-right: auto;
+			width: 805px;
+			height: auto;
+			font-family: 'Georgia';
+			}
+		 *{box-sizing: border-box;}
+
+		img{
+    		max-width: 100%;
+    		max-height: 100%;
+		}
+		a{text-decoration: none; color: black;}
+		.mySlides {display:none;position: relative; padding-left: 10px;  float:left;}
+		.w3-content{margin-left:auto;margin-right:auto;font-size: 15px;float: left;}
+		hr.news1{border-top: 1px dotted black; width:100%;}
+		.mySlides .content {
+			
+			margin: 0px;padding: 0px;
+		  position: absolute; /* Position the background text */
+		  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+		  background: rgb(0, 0, 0); /* Fallback color */
+		  background: rgba(0, 0, 0, 0.2); /* Black background with 0.2 opacity */
+		  color: #f1f1f1; /* Grey text */
+		  width: 98%; /* Full width */
+		  text-align: center;
+		  /*padding: 10px;  Some padding */
+		}
+
+		.button{
+			
+			position: fixed;
+			margin-left: 145px;
+			float:left;
+			width: 150px;
+			height: 70px;
+			font-family: 'georgia';
+		}
+		.ups{
+			background-color: #4d4d4d;
+  			
+  			border: 0.5px solid #8c8c8c;
+  			border-bottom: 0px;
+  			color: white;
+  			padding: 15px 25px;
+  			text-align: center;
+  			font-size: 15px;
+  			cursor: text;
+  			border-radius: 2px;
+  			width:150px;
+  			
+		}
+		.downs{
+			
+			background-color: #f2f2f2;
+			
+			border: 0.5px solid #8c8c8c;
+			border-top: 0px;
+			padding: 15px 25px;
+  			text-align: center;
+  			font-size: 15px;
+			color:black;
+			cursor: text;
+			border-radius: 2px;
+			width:150px;
+			
+		}
+		.ups:hover,.downs:hover{background-color: #008000;color: white;}
+		button:hover{background-color: #008000 ;color: white; border:0px;}
+			
+		.page2 .butt:hover{background-color: #008000;color: white;}
+		
+		#butt3:hover{background-color: green;
+		
+		}
+		
+		#page 2 .butt1:hover{background-color: #008000;color: white;}
+		.butt1{height: 100px;width: 100px;}
+
+
+		.word{
+			
+			margin-left: 30px;
+			margin-top: 0px;
+			background-color: #f2f2f2;
+			width: 300px;
+			height: 275px;
+			float:left ;
+		}
+		.card {
+		  
+		  transition: 0.3s;
+		  width: 23%;
+		  border-radius: 5px;
+		  float:left;
+		  margin: 5px;
+		  margin-left: 10px;
+		  height: 100%;
+		  
+		  background-color: #f2f2f2;
+		  
+		  overflow: hidden;
+		  text-overflow: ellipsis;
+		  border-color: #a6a6a6;
+		  border-style: solid;
+		  border-width: 1.5px;
+		  
+		}
+		.card img{border-radius: 5px;}
+		.card:after{
+			
+			display: table;
+			clear:both;		
+		}
+
+		
+		.container {padding: 2px 5px;height: 100%;text-align:center;font-size: 13px;background-color: #f2f2f2;}
+		.cnnn
+		{
+			
+			width: inherit;
+			clear :both;
+			margin-right:auto;
+			height: 450px;
+			padding: 5px;
+		}
+		.tabcontent {
+		  color: black;
+		  display: none;
+		  height: 100%;
+		}
+		#News{display: block; }
+		#Search{
+			text-align: center;
+			margin-left:none;margin-right:auto;
+			padding-top: 25px;padding-bottom: 25px;
+			width: 700px;
+			height:150px;
+			background-color: #f2f2f2;
+		}
+
+
+
+		#page2{
+			color: black;
+			margin-left:none;margin-right:auto;
+			width: 700px;
+			height:1000px;
+			margin-top: 45px;
+
+		}
+		#page2 a{text-decoration: underline; color: #0000EE;}
+
+		#page2 a:visited {color: #551A8B;}
+
+		.card2 {
+		  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+
+		  transition: 0.3s;
+		  width: 90%;
+		  border-radius: 5px;
+		  float:left;
+		  margin: 7px;
+		  height: 100px;
+		  margin-left: 35px;
+		  background-color: #f2f2f2;
+		  font-size:14px;
+		  border-color: grey;
+		  border-style: solid;
+		  border-width: 0.5px;
+		  text-align: left;
+		}
+		.card2:after{
+			display: table;
+			clear:both;		
+		}
+
+		.card2:hover {box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);}
+		.container2 
+		{
+			padding: 2px 16px;
+			color: black;
+			padding-right: 20px;
+		}
+
+		.card2:focus {
+   			height:  1200px;
+   			transition: ease-in-out, width .35s ease-in-out;
+		}
+
+		.card5 {
+			position: relative;
+		 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+			transition: 0.3s;
+			width: 90%;
+			border-radius: 5px;
+			float:left;
+			margin: 7px;
+			margin-left: 35px;
+			border-color: grey;
+			border-style: solid;
+			border-width: 0.5px;
+			text-align: left;
+			background-color: #f2f2f2;
+			padding-bottom: 15px;
+			font-size: 13px;
+			display:none;
+		}
+
+		#wording
+		{
+			font-size:14px;
+			margin-top:0px;
+			max-width:80px;
+			margin-right:10px;
+		}
+
+		.card2 img{ padding: 15px; }
+
+		span{display:inline-block;}
+
+		.close
+		{
+			cursor: pointer;
+			position: absolute;
+			padding-top: 10px;
+			top: 5px;
+			right: 1px;
+			padding: 0px 2px;
+			transform: translate(0%,-50%);
+		}
+
+	</style>
+	<script src="https://d3js.org/d3.v4.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js">
+	</script>
+</head>
+<body onload="viewJSON()">
+	
+    
+	<script type="text/javascript">
+		var jsonObj;
+		var jsonObj2;
+		var jsonObj1;
+
+		sam="<h6></h6><div class='button'> <div ><button id='tree1' class='ups'  onclick=\"openPage('News', this, 'ups')\" type='button'>Google News</button></div><div ><button id='tree2' class='downs' onclick=\"openPage('Search', this,'downs')\" type='button'>Search</button></div></div>";
+		
+		function viewJSON()
+		{
+			var url="/api";
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", url, true);
+			xhr.onload = function (e) 
+			{
+			 	if (xhr.readyState === 4) 
+			 	{
+			    	if (xhr.status === 200) 
+			    	{
+			    		// console.log('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^');
+			    		jsonObj= JSON.parse(xhr.responseText);
+			    		generateHTML(jsonObj);
+			    		document.write(sam);
+			    		document.write(html_text)
+			    		myIndex = 0;
+						carousel();
+
+						don = new Date();
+ 						don.setDate(don.getDate()-7);
+						document.getElementById('to').valueAsDate= new Date();
+						document.getElementById('from').valueAsDate = don;
+
+						wordlist(jsonObj);
+						
+
+			    	} 
+				    else 
+				    {
+				      console.error(xhr.statusText);
+				    }
+			  	}
+			};
+			
+			xhr.onerror = function (e) 
+			{
+			  console.error(xhr.statusText);
+			};
+			xhr.send(null);
+			return 
+		}
+
+		function generateHTML(jsonObj)   
+		{
+			var n = jsonObj.totalResults
+        	root=jsonObj.DocumentElement; 
+        	html_text="<html><head><title>JSON Parse Result</title><link rel='stylesheet' type='text/css' href='static/index.css'></head><body><div class='Main'>";
+        	
+        	planes=jsonObj.general.articles;
+        	planes_cnn=jsonObj.cnn.articles;
+        	planes_fox=jsonObj.fox.articles;
+        	
+        	if(planes==undefined){
+        		window.alert("No Data content in JSON file");
+        	}
+        	else if(planes.length==0){
+        		window.alert("Empty Data content in JSON file");
+        	}
+        	
+        	planeNodeList=planes[0];
+        	html_text+="<div id='News' class='tabcontent'>"
+        	html_text+="<div class='w3-content w3-section' style='max-width:450px;'>"
+        	for(i=0;i<planes.length;i++)
+        	{
+				newlist=planes[i];
+				
+				html_text+="<div class='mySlides'><a href='"+newlist["url"] +"'target='_blank'><img style='width:450px;height: 275px;' src='"+ newlist["urlToImage"] +"' >";
+				html_text+="<div class='content'><h3>"+newlist["title"] +"</h3><p>"+newlist["description"]+"</p></div></a></div>";
+						
+			}
+			html_text+="</div>";
+
+			html_text+="<div class=word></div>"
+
+			
+
+			html_text+="<div class='cnnn' style='width:100%'>";
+			html_text+="<br>";
+			html_text+="<div id='hello' style='clear:both;text-align:center;'><h1>CNN</h1></div>";
+			html_text+="<hr class='news1'>";
+        	for(i=0;i<4;i++)
+        	{
+				newlist=planes_cnn[i];
+				
+				html_text+="<div class='card'><a href='"+ newlist["url"]+"' target='_blank' ><img style='width:100%; height:125px' src='"+ newlist["urlToImage"] +"' >";
+				html_text+="<div class='container'><h3>"+newlist["title"] +"</h3><p>"+newlist["description"]+"</p></div></a></div>";
+							
+			}
+			html_text+="</div>";
+
+			
+			
+			html_text+="<div class='cnnn' style='width:100%'>"
+			html_text+="<br>";
+			html_text+="<div id='Hello2' style='clear:both;text-align:center;'><h1>Fox News</h1></div>";
+			html_text+="<hr class='news1'>";
+        	for(i=0;i<4;i++)
+        	{
+				newlist=planes_fox[i];
+				
+				html_text+="<div class='card'><a href='"+ newlist["url"]+"' target='_blank' ><img style='width:100%; height:125px' src='"+ newlist["urlToImage"] +"' >";
+				html_text+="<div class='container'><h4>"+newlist["title"] +"</h4><p>"+newlist["description"]+"</p></div></a></div>";
+				
+			}
+			html_text+="</div></div>";
+			html_text+="<div id='Search' class='tabcontent'>";
+			
+			html_text+="<div style='align-items: 'center';display:flex;justify-content: center;'><form id='imp' method='GET' onsubmit='return false'><label for='keyword'>Keyword &nbsp;</label> <input type='text' id='keyword' name='keyword' value='' required> &nbsp;&nbsp;&nbsp;&nbsp;	 <label for='from'>From &nbsp;</label><input type='date' id='from' name='from' required> &nbsp;&nbsp;&nbsp;&nbsp;	<label for='to'>To &nbsp;</label> <input type='date' id='to' name='to' required> <br><br> 	<label for='category'>Category &nbsp;</label> <select id='category' name='category' onchange='updateState(this);'><option value='all' selected>all</option><option value='business'>Business</option><option value='entertainment'>Entertainment</option><option value='general'>General</option><option value='health'>Health</option><option value='science'>Science</option><option value='sports'>Sports</option><option value='technology'>Technology</option></select>  &nbsp;&nbsp;&nbsp;&nbsp;  <label for='sour'>Source &nbsp;</label> <select id='sour' name='sour' style='width:100px;'><option value='all' selected>all</option></select> 	<br><br> <span id='last2'><input class='butt1' style='text-align:center;padding-top:6px; width: 100px;border:0px;' type='submit' value='Search' onclick='makeSearch(0)'></span>  &nbsp;&nbsp;&nbsp;&nbsp; 	<span id='last1'><input class='butt1' style='text-align:center;width: 100px;padding-top:6px;border:0px;' type='button' value='Clear' onclick='erase()'> </span></form></div>" ;
+			html_text+="<div id='page2'></div></div>";
+			
+
+			html_text+= "</div></bo" + "<dy> </html>";   
+		}
+
+		function erase(){
+			document.getElementById('page2').style.display="none";
+			dont = new Date();
+ 			dont.setDate(dont.getDate()-7);
+ 			
+ 			document.getElementById('keyword').value="";
+			document.getElementById('to').valueAsDate = new Date();
+			document.getElementById('from').valueAsDate = dont;
+			document.getElementById('category').value="all";
+			document.getElementById('sour').value="all";
+
+		}
+
+		function updateState(cate){
+			
+			var send= document.forms['imp'];
+			var temp= send['category'].value;
+			
+			var str='/catego?category='+temp;
+
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", str, true);
+			xhr.onload = function (e) 
+			{
+			  if (xhr.readyState === 4) 
+			  {
+			    if (xhr.status === 200) {
+			    	// console.log('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^');
+			    	jsonObj1= JSON.parse(xhr.responseText);
+			    	categories=jsonObj1.keys;
+			    	garb="<select id='sour' name='sour'><option value='all'>all</option>";
+			    	for (var t=0;t<categories.length;t++)
+			    	{
+			    		garb+="<option value='"+categories[t]+"'>"+categories[t]+"</option>";
+			    	}
+			    	document.getElementById("sour").innerHTML= garb;
+			    } 
+			    else {
+			      console.error(xhr.statusText);
+			    }
+			  }
+			};
+			xhr.onerror = function (e) 
+			{
+			  console.error(xhr.statusText);
+			};
+			xhr.send(null);
+			return 
+		}
+
+		function makeSearch(f)
+		{
+			document.getElementById('page2').style.display="block";
+			var d5= new Date();
+			var d6= new Date()
+			
+			var formed=document.forms['imp'];
+			var picnic;
+			if(new Date(formed['to'].value) - new Date(formed['from'].value)<0)
+			{
+				
+				alert("Incorrect time");
+				return;
+			}
+			else if( new Date(formed['from'].value) < new Date(d6.setDate(d6.getDate()-31)))
+			{
+				
+				var mo1=d6.getMonth()+2;
+				var da1= d6.getDate();
+				if(da1<=9)
+					da1='0'+da1;
+				if(mo1<=9)
+					mo1='0'+mo1;
+				
+				alert("You are trying to request results too far in the past. Your plan permits you to request articles as far back as "+d6.getFullYear()+"-"+mo1+"-"+ da1+", but you have requested "+ formed['from'].value+". To extend this please upgrade to a paid plan.");
+				return;
+			}
+			str='/formed?'+'keyword='+formed['keyword'].value+'&from='+formed['from'].value + '&to=' + formed['to'].value + '&category=' + formed['category'].value + '&sour='+ formed['sour'].value ; 
+			
+			var arr="";
+			var left="";
+			var subs="";
+			var tmp=0;
+			var flag=0;
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", str, true);
+			xhr.onload = function (e) 
+			{
+			  if (xhr.readyState === 4) 
+			  {
+			    if (xhr.status === 200)
+			     {
+			     	
+			    	jsonObj2=JSON.parse(xhr.responseText).articles;
+			    	if(jsonObj2.length==0){
+			    		disp();
+			    		
+			    		return;
+			    		// document.getElementById('page2').innerHTML=rasa;
+			    	}
+			    		
+			    	for(f=0;f<jsonObj2.length;f++)
+			    	{
+			    		subs=jsonObj2[f].publishedAt;
+						subs=subs.substring(0, subs.indexOf('T'));
+						i1=subs.indexOf('-');
+						i2=subs.indexOf('-',5);
+						date1=subs.substring(0,i1);
+						date2=subs.substring(i1+1,i2);
+						date3=subs.substring(i2+1,subs.length);
+						var dummy=date2+"/"+date3+"/"+date1;
+			    		tmp+=1;
+			    		var dummy1=jsonObj2[f].description;
+			    		var dumm="";
+			    		var bus=dummy1.split(' ');
+			    		for (y=0;y<bus.length;y++){
+			    			dumm+="<span>"+bus[y]+"</span>"+" ";
+			    		}
+			    		dumm=dumm.substring(0,dumm.length-1);
+			    		
+			    		if(tmp<=5){
+
+
+			    			arr+="<div id='picnic"+f+"'><div class='card2' onclick='expand("+f+")'><img style='width:100px; height:100px; float:left;' src='"+ jsonObj2[f].urlToImage +"'>";
+							arr+="<div class='container2'><h4 style='margin-top:10px; margin-bottom:0px;'>"+jsonObj2[f].title +"</h4><p style='display:inline-block; white-space:nowrap; overflow:hidden;text-overflow:ellipsis;width:475px;margin-right:10px;' >"+dumm+"</p></div></div></div>";
+
+
+							arr+="<div id='reduce"+f+"' ><div class='card5' style='height:auto;' ><img style='width:100px; height:100px;padding:15px; float:left;' src='"+ jsonObj2[f].urlToImage +"'>";
+							arr+="<div class='container2'><p style='display:inline' onclick='collapse("+f+")'><span class='close'>&times;</span></p><h4 style='margin-top:10px; margin-bottom:0px;'>"+jsonObj2[f].title +"</h4><p><strong >Author:</strong> &nbsp;"+jsonObj2[f].author+"<br><strong>Source:</strong> &nbsp;"+jsonObj2[f].source.name+"<br><strong>Date:</strong> &nbsp;"+dummy+"</p>"+"<span style='display:block; margin-left:80px;'>"+jsonObj2[f].description+"</span><br><span style='margin-left:80px;'><a href='"+jsonObj2[f].url+"' target='_blank'>See Original Post</a></span><br> </div></div></div>";
+
+						}
+						else{
+							left+="<div id='picnic"+f+"'><div class='card2' onclick='expand("+f+")'><img style='width:100px; height:100px; float:left;' src='"+ jsonObj2[f].urlToImage +"'>";
+							left+="<div class='container2'><h4 style='margin-top:10px; margin-bottom:0px;'>"+jsonObj2[f].title +"</h4><p style='display:inline-block; white-space:nowrap; overflow:hidden;text-overflow:ellipsis;width:450px;margin-right:10px;' >"+dumm+"</p></div></div></div>";
+
+
+
+							left+="<div id='reduce"+f+"' ><div class='card5' style='height:auto;' ><img style='width:100px; height:100px;padding:15px; float:left;' src='"+ jsonObj2[f].urlToImage +"'>";
+							left+="<div class='container2'><p style='display:inline' onclick='collapse("+f+")'><span class='close'>&times;</span></p><h4 style='margin-top:10px; margin-bottom:0px;'>"+jsonObj2[f].title +"</h4><p><strong>Author:</strong> &nbsp;"+jsonObj2[f].author+"<br><strong>Source:</strong> &nbsp;"+jsonObj2[f].source.name+"<br><strong>Date:</strong> &nbsp;"+dummy+"</p>"+"<span style='display:block;margin-left:80px;'>"+jsonObj2[f].description+"</span><br><span style='margin-left:80px;'><a href='"+jsonObj2[f].url+"' target='_blank'>See Original Post</a><br> </div></div></div>";
+						}
+						
+						if(tmp==5){
+							
+							left+=arr;
+							arr+="<div id='but1'><div class='butt' style='background-color:hover #008000;text-align:center;'> <button type='button' style='width: 100px;'>Show More</button></class></div>";
+
+						}
+
+
+						if(left==jsonObj2.length-1 || tmp==15) 
+							
+							left+="<div id='but2'><button>Show Less</button></div> ";
+							
+						if(tmp>=15){
+							break;
+						}
+							
+			    	}
+			    	
+			    	document.getElementById('page2').innerHTML=arr;
+
+			    	document.getElementById('but1').onclick = function() 
+			    	{
+			    		
+			    		document.getElementById('page2').innerHTML=left;
+			    		document.getElementById('but2').onclick = function() 
+			    		{
+				    		document.getElementById('page2').innerHTML=arr;
+							document.getElementById('but1').onclick = function() 
+							{
+					    		document.getElementById('page2').innerHTML=left;
+					    		document.getElementById('but2').onclick = function() 
+					    		{
+						    		document.getElementById('page2').innerHTML=arr;
+							    };
+								    		
+							};
+							    
+				    	};
+				    };
+
+				    
+			    } 
+			    else {
+			      console.error(xhr.statusText);
+			    }
+			  }
+			};
+			xhr.onerror = function (e) 
+			{
+			  console.error(xhr.statusText);
+			};
+			xhr.send(null);
+
+		}
+
+		
+  		function disp(){
+  			document.getElementById('page2').innerHTML="No results";
+  		}
+  		function collapse(f)
+  		{
+  			document.getElementById("picnic"+f).style='display:block;';
+  			document.getElementsByClassName("card2")[f].style='display:block';
+	    	document.getElementsByClassName("card5")[f].style='display:hidden';
+	    	
+  		}
+  		function expand(f)
+	    {
+	    	
+
+	    	document.getElementById("picnic"+f).style='display:none;';
+	    	document.getElementsByClassName("card5")[f].style='display:block';
+	    	document.getElementById("reduce"+f).style.display="block";
+	    }
+
+        function showMore(left){
+        	document.getElementById('page2').innerHTML=left;
+        }
+
+		function carousel() 
+		{
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			
+			for (i = 0; i < x.length; i++) 
+			{
+				x[i].style.display = "none";
+				 
+			}
+			myIndex++;
+			if (myIndex > x.length) {myIndex = 1;} 
+			
+			x[myIndex-1].style.display = "block";  
+			setTimeout(carousel, 2000); // Change image every 2 seconds
+		}
+
+		
+		function wordlist(jsonObj)
+		{
+			var layout = d3.layout.cloud()
+	    	.size([275, 275])
+	    	.words(jsonObj.word.map(function(d) 
+	    	{
+	      		return {text: d, size: 3 + Math.random() * 27, test: "haha"};
+	  		}))
+	    	.padding(5)
+	    	.rotate(function() { return ~~(Math.random() * 2) * 90; })
+	    	.font("Impact")
+	    	.fontSize(function(d) { return d.size; })
+	    	.on("end", draw);
+
+			layout.start();
+
+			// This function takes the output of 'layout' above and draw the words
+			// Wordcloud features that are THE SAME from one word to the other can be here
+			function draw(words) {
+				
+		  		d3.select(".word").append("svg")
+		      	.attr("width", layout.size()[0])
+		      	.attr("height", layout.size()[1])
+		    	.append("g")
+		      	.attr("transform", "translate(" + layout.size()[0] / 2 + "," + layout.size()[1] / 2 + ")")
+		    	.selectAll("text")
+		      	.data(words)
+		    	.enter().append("text")
+		      	.style("font-size", function(d) { return d.size + "px"; })
+		      	.style("font-family", "Impact")
+		      	.attr("text-anchor", "middle")
+		      	.attr("transform", function(d) 
+		      	{
+		        	return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+		      	})
+		      .text(function(d) { return d.text; });  
+		 	}             		
+		}
+
+
+		function openPage(pageName,elmnt,color) 
+		{
+			
+		  	var i, tabcontent, tablinks;
+		  	tabcontent = document.getElementsByClassName("tabcontent");
+		  	for (i = 0; i < tabcontent.length; i++) {
+		    tabcontent[i].style.display = "none";}
+			
+			document.getElementById(pageName).style.display = "block";
+			
+			if(color=='downs')
+			{
+				var tired = document.getElementById("tree1");
+  				tired.classList.remove("ups");
+  				tired.classList.add("downs");
+
+  				var tired1 = document.getElementById("tree2");
+  				tired1.classList.remove("downs");
+  				tired1.classList.add("ups");
+
+			}
+			else if(color=='ups')
+			{
+				var tired = document.getElementById("tree1");
+  				tired.classList.remove("downs");
+  				tired.classList.add("ups");
+
+				var tired1 = document.getElementById("tree2");
+  				tired1.classList.remove("ups");
+  				tired1.classList.add("downs");
+			}
+		  
+		}
+	
+		
+
+	</script>
+
+</body>
+</html>
+
