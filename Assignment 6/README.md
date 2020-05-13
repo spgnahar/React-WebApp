@@ -4,17 +4,20 @@
 
 ## Technologies Used:
 
-# To Develop the Front-End 
+### To Develop the Front-End 
 HTML, CSS, JavaScript, JSON
 
-# To Develop the Back-End
+### To Develop the Back-End
 FLASK(Python)
 
-# Deployment
+### Deployment
 AWS
 
 
-[Full description of the assignment](https://github.com/spgnahar/CSCI-571-Web-Technologies/blob/master/Assignment%206/HW6_Description.pdf).
+[Full description of the assignment](https://github.com/spgnahar/CSCI-571-Web-Technologies/blob/master/Assignment%206/HW6_Description.pdf)
+
+[Full video description of the working](https://youtu.be/AX00rwq-qQc)
+
 ## Screenshots of the Working 
 
 ![Imgur](https://i.imgur.com/fqOKKJ1.png)

@@ -1,4 +1,5 @@
-from newsapi import NewsApiClient
+route
+
 from flask import Flask, jsonify,render_template,request
 import json
 import re
@@ -22,7 +23,7 @@ def api_m():
     abc1=[]
     abc2=[]
     j=0
-    newsapi = NewsApiClient(api_key='8e35f48c905e43e7a7835ebde2de2a83')
+    newsapi = NewsApiClient(api_key='YOUR_KEY')
 
     stop=set(line.strip() for line in open('stopwords_en.txt'))
     top_headlines_general = newsapi.get_top_headlines(language='en',page_size=30)
@@ -77,7 +78,7 @@ def api_m():
 def form():
     abc3=[]
     
-    newsapi = NewsApiClient(api_key='8e35f48c905e43e7a7835ebde2de2a83')
+    newsapi = NewsApiClient(api_key='YOUR_KEY')
     try:
 
         if(request.args.get('category')=='all' and request.args.get('sour')=='all'):
@@ -140,7 +141,7 @@ def form():
 
 @application.route('/catego',methods=['GET','POST'])
 def inp():
-    newsapi = NewsApiClient(api_key='8e35f48c905e43e7a7835ebde2de2a83')
+    newsapi = NewsApiClient(api_key='YOUR_KEY')
     b={}
     text=request.args.get('category')
     if(text=='all'):
