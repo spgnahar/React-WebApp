@@ -30,8 +30,6 @@ AWS
 
 ![Imgur](https://i.imgur.com/YbDmnm1.png)
 
-<<<<<<< HEAD
 ![Imgur](https://i.imgur.com/gjX4VRm.png)
-=======
+
 ![Imgur](https://i.imgur.com/gjX4VRm.png)
->>>>>>> 4a73a6bf728ec8758c579a663d1dbbbcc9b2cb64
