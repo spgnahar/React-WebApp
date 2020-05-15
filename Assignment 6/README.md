@@ -26,8 +26,8 @@ AWS
 
 ![Imgur](https://i.imgur.com/xiBkzCJ.png)
 
-[Imgur](https://i.imgur.com/3kHAXdI.png)
+![Imgur](https://i.imgur.com/3kHAXdI.png)
 
-[Imgur](https://i.imgur.com/YbDmnm1.png)
+![Imgur](https://i.imgur.com/YbDmnm1.png)
 
-[Imgur](https://i.imgur.com/gjX4VRm.png)
+![Imgur](https://i.imgur.com/gjX4VRm.png)
