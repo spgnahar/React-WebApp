@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    tools:context=".ui.headlines.HeadlinesFragment">
+
+    <!--    <Toolbar android:layout_height="wrap_content"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:id="@+id/toolbar"-->
+    <!--        android:background="@color/colorPrimaryDark"-->
+    <!--        android:minHeight="?attr/actionBarSize"-->
+    <!--        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
+    <!--        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"-->
+    <!--        />-->
+
+
+
+
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:id="@+id/appbar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@android:color/white"
+        >
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/tablayout"
+            app:tabMode="scrollable"
+            app:tabGravity="fill"
+            app:tabTextColor="@color/colorPrimaryDark"
+            app:tabIndicatorColor="@color/colorPrimaryDark"
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_marginTop="110dp"
+        android:id="@+id/pager"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+    </androidx.viewpager.widget.ViewPager>
+
+
+
+</RelativeLayout>

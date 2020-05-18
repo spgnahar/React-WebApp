@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/small_card"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:layout_margin="7dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/smallcard_image"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_margin="0dp"
+                android:padding="0dp"
+                android:clickable="true"
+                android:scaleType="fitXY"
+                 />
+
+            <TextView
+                android:id="@+id/text_smallcard_heading"
+                android:text="THIS IS THE HEADING LONG LONG LONG"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="23dp"
+                android:textSize="16sp"
+                android:layout_toEndOf="@+id/smallcard_image"
+                />
+            <ImageView
+                android:id="@+id/bookmark_image"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="0dp"
+                android:padding="1dp"
+                android:src="@drawable/ic_bookmark_single_border"
+                android:tint="@color/bookmark"
+                android:layout_alignParentRight="true"
+                />
+
+<!--            <LinearLayout-->
+<!--                android:layout_marginLeft="110dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_alignParentBottom="true">-->
+
+            <TextView
+                android:text="random"
+                android:id="@+id/text_smallcard_date"
+                android:layout_width="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="8dp"
+                android:paddingBottom="10dp"
+
+                android:layout_toEndOf="@+id/smallcard_image"
+                android:textSize="14sp">
+
+            </TextView>
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="1.5dp"
+                    android:layout_toEndOf="@id/text_smallcard_date"
+                    android:layout_alignParentBottom="true"
+                    android:layout_height="15dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorPrimary" />
+
+            <TextView
+                android:text="favvv"
+                android:id="@+id/text_smallcard_section"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="8dp"
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="10dp"
+                android:layout_toEndOf="@+id/view"
+                android:textSize="14sp">
+
+            </TextView>
+<!--            </LinearLayout>-->
+
+        </RelativeLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/dash"
+
+
+        />
+</LinearLayout>

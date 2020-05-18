@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_world"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/tab_world" />
+
+    <item
+        android:id="@+id/navigation_business"
+        android:icon="@drawable/icon_news"
+        android:title="@string/tab_business" />
+
+    <item
+        android:id="@+id/navigation_politics"
+        android:icon="@drawable/baseline_trending_up_black_18dp"
+        android:title="@string/tab_politics" />
+    <item
+        android:id="@+id/navigation_sports"
+        android:icon="@drawable/baseline_bookmarks_black_18dp"
+        android:title="@string/tab_sports" />
+
+    <item
+        android:id="@+id/navigation_technology"
+        android:icon="@drawable/baseline_bookmarks_black_18dp"
+        android:title="@string/tab_technology" />
+
+    <item
+        android:id="@+id/navigation_science"
+        android:icon="@drawable/baseline_bookmarks_black_18dp"
+        android:title="@string/tab_science" />
+
+</menu>

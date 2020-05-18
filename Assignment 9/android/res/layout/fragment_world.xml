@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".ui.WorldFragment">
+
+<!--    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+<!--        android:id="@+id/swip_refresh"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="20dp">-->
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swip_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_height="match_parent"
+        android:id="@+id/my_recycle_view"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        tools:context=".ui.WorldFragment"
+
+        android:layout_marginBottom="50dp">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <ProgressBar
+            android:indeterminateTint="@color/colorPrimaryDark"
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="Fetching News"
+
+            android:layout_centerInParent="true"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>
+
+
+
+<!--    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+
+
+<!--    <?xml version="1.0" encoding="utf-8"?>-->
+<!--<rotate-->
+<!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--android:fromDegrees="90"-->
+<!--android:pivotX="50%"-->
+<!--android:pivotY="50%"-->
+<!--android:toDegrees="360">-->
+
+<!--<shape-->
+<!--    android:innerRadiusRatio="3"-->
+<!--    android:shape="ring"-->
+<!--    android:thicknessRatio="7.0">-->
+
+<!--    <gradient-->
+<!--        android:centerColor="#6200EE"-->
+<!--        android:endColor="#6200EE"-->
+<!--        android:startColor="#6200EE"-->
+<!--        android:angle="0"-->
+<!--        android:type="sweep"-->
+<!--        android:useLevel="false" />-->
+<!--</shape>-->
+
+<!--</rotate>-->
